@@ -1,4 +1,4 @@
-//Added a cointoss module from https://www.npmjs.com/package/coin-toss
+//Added a coin-toss module from https://www.npmjs.com/package/coin-toss
 const coin = require('../handlers/coin-handler');
 
 module.exports = {
