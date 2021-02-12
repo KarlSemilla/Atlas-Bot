@@ -22,9 +22,6 @@ for(const file of commandFiles){
 // */
 // const gw2 = require("./handlers/gw2-api.js");
 
-//Giveaway module that takes the user's Discord ID and puts it into the Database for a giveaway.
-const giveaway = require('./handlers/giveaway-handler.js')
-
 
 client.on('ready', () => {
   console.log('Bot is active!');
