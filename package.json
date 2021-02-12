@@ -1,0 +1,16 @@
+{
+  "name": "codex",
+  "version": "1.0.0",
+  "description": "A general use Guild Wars 2 Discord bot with additional 'fun' functions on Discord.",
+  "main": "index.js",
+  "scripts": {
+    "test": "!version"
+  },
+  "author": "Ark (Arkanon.6951)",
+  "license": "ISC",
+  "dependencies": {
+    "coin-toss": "^0.2.1",
+    "discord.js": "^12.5.1",
+    "mongoose": "^5.11.15"
+  }
+}
