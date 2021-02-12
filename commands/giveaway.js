@@ -1,5 +1,4 @@
 //Giveaway module that takes the user's Discord ID and puts it into the Database for a giveaway.
-const giveaway = require('../handlers/giveaway.js')
  
 module.exports = {
     name: 'giveaway',
