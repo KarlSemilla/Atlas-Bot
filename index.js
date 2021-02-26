@@ -50,7 +50,7 @@ client.on('message', (msg) => {
   to a the giveaway table located on MongoDB.
   */
   if(command === 'giveaway'){
-    client.commands.get('flip').execute(msg, args);
+    client.commands.get('giveaway').execute(client, msg);
   }
 
 });
