@@ -1,2 +1,5 @@
 # This is the bot token, sensitive data!
 bot-token.json
+
+# This contains sensitive bot information, keep safe!
+mongo.js
