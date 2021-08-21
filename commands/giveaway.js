@@ -29,11 +29,8 @@ module.exports = {
         message.channel.send(giveawayMessage)
             .then((sentMessage) => {
                 sentMessage.react('🗳️');
-                giveawayTimer();
+                //giveawayTimer(); Need to implement a timer for later
             })
-            .catch(() => {
-                message.channel.send('Error occured with reaction to giveaway message.');
-            });
 
         client.on('messageReactionAdd', (user, reaction) => {
             if(!reaction.bot){
@@ -52,7 +49,7 @@ module.exports = {
                 if(bool == true){
                     await mongo().then(async (mongoose) => {
                         try {
-                            let total = await giveawaySchema.count().exec();
+                            let total = await giveawaySchema.countDocuments().exec();
                             total++;
                             await new giveawaySchema({
                                 _id: total,

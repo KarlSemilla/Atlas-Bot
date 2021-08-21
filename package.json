@@ -11,6 +11,6 @@
   "dependencies": {
     "coin-toss": "^0.2.1",
     "discord.js": "^12.5.1",
-    "mongoose": "^5.11.15"
+    "mongoose": "^5.12.0"
   }
 }
