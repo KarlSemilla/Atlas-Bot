@@ -2,4 +2,8 @@
 bot-token.json
 
 # This contains sensitive bot information, keep safe!
-mongo.js
+handlers/mongo.js
+
+# Folder too large, long pull times.
+/node_modules
+/.vscode
