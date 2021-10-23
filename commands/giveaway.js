@@ -82,7 +82,7 @@ module.exports = {
                 }
             }
             catch{
-                console.log('Error');
+                console.log('Error, connection to DB failed.');
             }
         }   
     }

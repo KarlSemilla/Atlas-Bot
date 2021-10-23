@@ -19,8 +19,8 @@ for(const file of commandFiles){
 
 /* 
     Adding Guild Wars 2 API Wrapper.
-// */
-// const gw2 = require("./handlers/gw2-api.js");
+*/
+//const gw2 = require("./handlers/gw2-api.js");
 
 
 client.on('ready', () => {
@@ -28,32 +28,35 @@ client.on('ready', () => {
 });
 
 
-client.on('message', (msg) => {
-  //Checks if message contains prefix or if the bot is the author of the message; returns nothing.
-  if(!msg.content.startsWith(config.prefix) || msg.author.bot) return;
+// client.on('message', (msg) => {
+//   //Checks if message contains prefix or if the bot is the author of the message; returns nothing.
+//   if(!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
-  const args = msg.content.slice(config.prefix.length).split(/ +/);
-  const command = args.shift().toLowerCase();
+//   const args = msg.content.slice(config.prefix.length).split(/ +/);
+//   const command = args.shift().toLowerCase();
 
   
-  //If message recieved is "!hello", returns Hello! back in the text chat.
-  if(command === 'hello'){
-    client.commands.get('hello').execute(msg, args);
-  }
+//   //If message recieved is "!hello", returns Hello! back in the text chat.
+//   if(command === 'hello'){
+//     client.commands.get('hello').execute(msg, args);
+//   }
 
-  //If message recieved is "!flip", returns a result of heads or tails back in the text chat.
-  if(command === 'flip'){
-    client.commands.get('flip').execute(msg, args);
-  }
+//   //If message recieved is "!flip", returns a result of heads or tails back in the text chat.
+//   if(command === 'flip'){
+//     client.commands.get('flip').execute(msg, args);
+//   }
 
-  /*This function will check if the message is "!giveaway", which will then proceed to add the user's tag(name.####)
-  to a the giveaway table located on MongoDB.
-  */
-  if(command === 'giveaway'){
-    client.commands.get('giveaway').execute(msg, client);
-  }
+//   /*This function will check if the message is "!giveaway", which will then proceed to add the user's tag(name.####)
+//   to a the giveaway table located on MongoDB.
+//   */
+//   if(command === 'giveaway'){
+//     client.commands.get('giveaway').execute(msg, client);
+//   }
 
-});
+//   if(command === 'api'){
+//     client.commands.get('fetch-api').execute(msg, client, config.apiKey);
+//   }
+// });
 
 
 client.login(auth.token);
