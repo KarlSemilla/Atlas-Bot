@@ -8,7 +8,7 @@ module.exports = {
 		.setDescription(
 			'This command flips a coin and decides whether the outcome will be "Heads" or "Tails"'
 		),
-	async execute(message, args) {
-		message.channel.send("🪙 " + coin.toss());
+	async execute(interaction) {
+		interaction.reply("🪙 " + coin.toss());
 	},
 };

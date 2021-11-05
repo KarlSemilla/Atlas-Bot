@@ -4,7 +4,8 @@ const fs = require("fs");
 
 // Place your client and guild ids here
 const clientId = "808821065227960353";
-const guildId = "697635121494360066";
+const guildId = "817571124941422612"; //AnE
+//"697635121494360066"; BTS
 
 module.exports = (client) => {
 	client.handleCommands = async (commandFolders, path) => {
@@ -19,24 +20,24 @@ module.exports = (client) => {
 				client.commands.set(command.data.name, command);
 				client.commandArray.push(command.data.toJSON());
 			}
-
-			const rest = new REST({
-				version: "9",
-			}).setToken(process.env.token);
-
-			(async () => {
-				try {
-					console.log("Started refreshing application (/) commands.");
-
-					await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
-						body: client.commandArray,
-					});
-
-					console.log("Successfully reloaded application (/) commands.");
-				} catch (error) {
-					console.error(error);
-				}
-			})();
 		}
+
+		const rest = new REST({
+			version: "9",
+		}).setToken(process.env.token);
+
+		(async () => {
+			try {
+				console.log("Started refreshing application (/) commands.");
+
+				await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
+					body: client.commandArray,
+				});
+
+				console.log("Successfully reloaded application (/) commands.");
+			} catch (error) {
+				console.error(error);
+			}
+		})();
 	};
 };

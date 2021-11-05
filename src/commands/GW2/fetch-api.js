@@ -1,12 +1,13 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const gw2Client = require("gw2api-client");
 const accountTemplate = require("../../embed-templates/accountTemplate.js");
+const interactionCreate = require("../../events/interactionCreate.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("fetch-api")
 		.setDescription("This command fetches Guild Wars 2 information"),
-	async execute(message, args, key) {
+	async execute(interaction, key) {
 		let gw2 = gw2Client();
 		const user = gw2.authenticate(key);
 
@@ -19,6 +20,6 @@ module.exports = {
 			world: await gw2.worlds().all(),
 		};
 
-		message.channel.send(accountTemplate(message, userInfo));
+		interaction.reply(accountTemplate(message, userInfo));
 	},
 };

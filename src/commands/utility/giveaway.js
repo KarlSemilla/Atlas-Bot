@@ -22,14 +22,14 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("giveaway")
 		.setDescription("Sends a giveaway message with a reaction attached."),
-	async execute(message, client) {
+	async execute(interaction) {
 		//The algorithm is not yet complete. Need to connect DB and pull from collection.
 		if (!message.member.hasPermission("ADMINISTRATOR")) {
 			message.reply("You do not have permission to use this command.");
 			return;
 		}
 
-		message.channel.send(giveawayMessage).then((sentMessage) => {
+		interaction.reply(giveawayMessage).then((sentMessage) => {
 			sentMessage.react("🗳️");
 			//giveawayTimer(); Need to implement a timer for later
 		});
