@@ -2,7 +2,7 @@
   "name": "atlas",
   "version": "1.0.0",
   "description": "A general use Guild Wars 2 Discord bot with additional 'fun' functions on Discord.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "!version"
   },
@@ -10,10 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/builders": "^0.7.0",
-    "@discordjs/rest": "0.1.0-canary.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
     "coin-toss": "^0.2.1",
     "discord-api-types": "^0.24.0",
     "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
     "gw2api-client": "^7.5.1",
     "mongoose": "^5.13.12"
   }

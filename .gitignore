@@ -1,9 +1,13 @@
 # This is the bot token, sensitive data!
 bot-token.json
+.env
 
 # This contains sensitive bot information, keep safe!
-handlers/mongo.js
+src/handlers/mongo.js
 
 # Folder too large, long pull times.
 /node_modules
 /.vscode
+
+# Dev Notes - Shouldn't make it into production
+project-notes.md
